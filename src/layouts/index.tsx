@@ -1,18 +1,18 @@
-import { Outlet, Link } from 'react-router-dom'
-import AppMain from './components/AppMain'
+import AppMain from "./components/AppMain/index";
+import "./index.scss";
+import BottomTabBar from "@/components/BottomTabBar/index";
 
-export default function layout() {
+const layout = () => {
   return (
-    <div>
-      <AppMain /> 
+    <div className="layout">
+      {/* <div className="app-main"> */}
+        <AppMain />
+      {/* </div> */}
+      <footer className="bottom-tab-bar">
+        <BottomTabBar />
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-// <header className="p-4 bg-gray-100">
-//   <Link to="/home" className="mr-4">首页</Link>
-//   <Link to="/about">关于</Link>
-// </header>
-// <main className="p-4">
-//   <Outlet /> {/* 渲染子页面 */}
-// </main>
+export default layout;

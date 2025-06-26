@@ -11,8 +11,8 @@ export default function FeedCard() {
       </div>
       <div className="text-sm mb-2">什么叫你看得见我看不见的女人</div>
       <div className="grid grid-cols-2 gap-2">
-        <img src="https://via.placeholder.com/150" alt="1" className="rounded" />
-        <img src="https://via.placeholder.com/150" alt="2" className="rounded" />
+        {/* <img src="https://via.placeholder.com/150" alt="1" className="rounded" />
+        <img src="https://via.placeholder.com/150" alt="2" className="rounded" /> */}
       </div>
     </div>
   )

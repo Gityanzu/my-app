@@ -1,0 +1,15 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .app-main {
+    flex: 1;
+  }
+  .bottom-tab-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: end;
+  }
+}
