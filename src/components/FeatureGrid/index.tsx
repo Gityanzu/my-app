@@ -1,5 +1,4 @@
 import "./index.scss";
-import { JumboTabs } from "antd-mobile";
 
 
 const features = [

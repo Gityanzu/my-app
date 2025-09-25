@@ -10,7 +10,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       const res = await login({ username, password })
-      localStorage.setItem('token', res.token) // 假设后端返回 { token: 'xxx' }
+      localStorage.setItem('token', (res as any).token) // 假设后端返回 { token: 'xxx' }
       navigate('/home')
     } catch (err) {
       alert('登录失败，请检查账号密码')

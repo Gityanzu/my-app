@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Button, SearchBar, Space, Toast } from "antd-mobile";
 import { SearchBarRef } from "antd-mobile/es/components/search-bar";
 import "./index.scss";

@@ -1,4 +1,4 @@
-import request from "@/utils/services/request.ts";
+import request from "@/utils/services/request";
 
 // 用户相关接口
 export const getUserProfile = () => request.get("/user/profile");

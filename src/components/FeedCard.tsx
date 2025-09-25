@@ -1,4 +1,3 @@
-
 export default function FeedCard() {
   return (
     <div className="border rounded-lg p-3">

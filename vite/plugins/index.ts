@@ -14,7 +14,7 @@ export default (viteEnv: any, isBuild = false): [] => {
   vitePlugins.push(react());
   // vitePlugins.push(vueDevTools());
   vitePlugins.push(createAutoImport(path));
-  vitePlugins.push(createComponents(path));
+  // vitePlugins.push(createComponents(path));
   // vitePlugins.push(createCompression(viteEnv));
   // vitePlugins.push(createIcons());
   // vitePlugins.push(createSvgIconsPlugin(path));
