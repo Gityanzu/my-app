@@ -1,5 +1,6 @@
 import AppMain from "./components/AppMain/index";
 import "./index.scss";
+import { Outlet } from "react-router-dom";
 import BottomTabBar from "@/components/BottomTabBar/index";
 
 const layout = () => {

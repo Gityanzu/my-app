@@ -1,23 +1,38 @@
 import { use, useEffect, useState } from "react";
+import { Tabs, Badge } from "antd-mobile";
 import "./index.scss";
+import { Outlet } from "react-router-dom";
 
+import ChatList from "./chatList";
+import Notice from "./notice";
 const Message = () => {
-const [count, setCount] = useState(0);
-const setCountClick = () => {
-  console.log('count:', count);
-  setCount(count + 1);
-};
-useEffect(() => {
-  console.log('useEffect:', count);
-}, [count]);
+  const tabList = [
+    {
+      title: "聊天",
+      key: "chat",
+      components: <ChatList></ChatList>,
+    },
+    {
+      title: (
+        <Badge content="101" style={{ "--right": "-10px", "--top": "8px" }}>
+          通知
+        </Badge>
+      ),
+      key: "notice",
+      components: <Notice></Notice>,
+    },
+  ];
 
 
   return (
     <>
-      <h2>这是消息页面</h2>
-      <div className="message">count: {count}</div>
-      <div> <button className="btn" onClick={setCountClick}>按钮</button>
-      </div>
+      <Tabs className="tabs">
+        {tabList.map((item) => (
+          <Tabs.Tab title={item.title} key={item.key}>
+            {item.components}
+          </Tabs.Tab>
+        ))}
+      </Tabs>
     </>
   );
 };

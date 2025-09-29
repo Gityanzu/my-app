@@ -6,9 +6,14 @@ import App from './App'
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
-  createRoot(rootElement).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
+  const root = createRoot(rootElement);
+  if (import.meta.env.DEV) {
+    root.render(<App />);
+  } else {
+    root.render(
+      <StrictMode>
+        <App />
+      </StrictMode>,
+    );
+  }
 }
